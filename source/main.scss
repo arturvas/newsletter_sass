@@ -1,0 +1,16 @@
+@use "config/reset";
+
+body {
+  background: aliceblue;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  padding: 16px 0;
+  background-color: bisque;
+}
