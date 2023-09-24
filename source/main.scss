@@ -68,6 +68,10 @@ header {
       font-size: 18px;
       font-weight: bold;
       color: #fff;
+
+      &:hover {
+        background-color: darken(variaveis.$corSecundaria, 5%);
+      }
     }
   }
 }
