@@ -1,11 +1,16 @@
 @use "config/variaveis.scss";
 @use "config/reset";
+@use "sass:math";
 
 @mixin elementoForm($margin: 16px) {
   padding: 8px;
   display: block;
   width: 100%;
   margin-bottom: $margin;
+}
+
+@function pixelParaEm($alvoEmPixel, $contextoEmPixel: 16px) {
+  @return math.div($alvoEmPixel, $contextoEmPixel) + em;
 }
 
 body {
@@ -34,7 +39,7 @@ header {
   max-width: 760px;
 
   h2 {
-    font-size: 48px;
+    font-size: pixelParaEm(48px);
     text-align: center;
   }
 
@@ -64,5 +69,11 @@ header {
       font-weight: bold;
       color: #fff;
     }
+  }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+  .container {
+    max-width: 80%;
   }
 }
